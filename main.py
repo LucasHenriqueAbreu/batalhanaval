@@ -12,6 +12,8 @@ def rodar_programa():
     placar(jogador1, jogador2)
     tabuleiros = cria_tabuleiro(jogador1), cria_tabuleiro(jogador2)
     mostrar_tabuleiro(tabuleiros)
-
+    # Posicionamento dos barcos
+    # Batalha, ou seja, jogadores atirando um no outro até que um seja derrotado!
+    # mostra o vencedor
 
 rodar_programa()
