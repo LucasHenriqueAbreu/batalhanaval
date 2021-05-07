@@ -1,13 +1,6 @@
-from random import randint
 
-def cria_jogador(id):
-    nome = input('Informe o seu nome: ')
-    return {
-        'id': id,
-        'nome': nome,
-        'pontos': 0,
-        'vez': False
-    }
+def pedir_nome(id):
+    return input('Informe o seu nome: ')
 
 
 def placar(jogador1, jogador2):
@@ -19,8 +12,3 @@ def placar(jogador1, jogador2):
     print(f'A vez de jogar é de {nome_jogador_da_vez}')
 
 
-def sortear_jogador_inicial(jogador1, jogador2):
-    jogadores = jogador1, jogador2
-    numero_sorteado = randint(0, 1)
-    jogadores[numero_sorteado]['vez'] = True
-    return jogadores

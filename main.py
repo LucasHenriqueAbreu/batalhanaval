@@ -1,15 +1,9 @@
+from jogo.jogadores import criar_jogadores, sortear_jogador_inicial
 from jogo.tabuleiro import cria_tabuleiro
-from telas.jogadores import cria_jogador, placar, sortear_jogador_inicial
-from telas.mensagens import mensagem_inicializacao, mensagem_criacao_jogador
+from telas.jogadores import placar
+from telas.mensagens import mensagem_inicializacao
 from telas.tabuleiro import mostrar_tabuleiro
 
-
-def criar_jogadores():
-    mensagem_criacao_jogador('Jogador 1')
-    jogador1 = cria_jogador(1)
-    mensagem_criacao_jogador('Jogador 2')
-    jogador2 = cria_jogador(2)
-    return jogador1, jogador2
 
 def rodar_programa():
     mensagem_inicializacao()
@@ -18,5 +12,6 @@ def rodar_programa():
     placar(jogador1, jogador2)
     tabuleiros = cria_tabuleiro(jogador1), cria_tabuleiro(jogador2)
     mostrar_tabuleiro(tabuleiros)
+
 
 rodar_programa()

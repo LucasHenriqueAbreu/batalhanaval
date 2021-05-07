@@ -1,5 +1,7 @@
 from time import sleep
 
+from utils.fonte_cor import adiciona_cor
+
 
 def mostrar_tabuleiro(tabuleiros):
     for i, tabuleiro in enumerate(tabuleiros):
@@ -11,7 +13,7 @@ def mostrar_tabuleiro(tabuleiros):
             mostrar_indice_linha(j)
             for posicao in linha:
                 cor = '31m' if id_jogador == 1 else '34m'
-                print(f'\033[{cor} * \033[0;0m', end=' ')
+                print(f'{adiciona_cor(cor, " * ")}', end=' ')
             print()
             if j == len(area) - 1 and id_jogador == 2:
                 mostrar_indice_coluna(len(linha))
@@ -24,9 +26,9 @@ def mostrar_indice_coluna(tamanho_linha):
     for count in range(0, tamanho_linha):
         end = '\n' if count == tamanho_linha - 1 else ' '
         espaco_extra = '  ' if count == 0 else ''
-        print(f'{espaco_extra} {count} ', end=end)
+        print(f'{espaco_extra} {adiciona_cor("33m", count)} ', end=end)
 
 
-def mostrar_indice_linha(j):
-    print(j, end=':')
+def mostrar_indice_linha(indice):
+    print(adiciona_cor("33m", indice), end=':')
 
