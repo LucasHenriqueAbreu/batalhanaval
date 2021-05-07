@@ -6,9 +6,9 @@ from telas.tabuleiro import mostrar_tabuleiro
 
 def criar_jogadores():
     mensagem_criacao_jogador('Jogador 1')
-    jogador1 = cria_jogador()
+    jogador1 = cria_jogador(1)
     mensagem_criacao_jogador('Jogador 2')
-    jogador2 = cria_jogador()
+    jogador2 = cria_jogador(2)
     return jogador1, jogador2
 
 def rodar_programa():
@@ -16,7 +16,7 @@ def rodar_programa():
     jogador1, jogador2 = criar_jogadores()
     jogador1, jogador2 = sortear_jogador_inicial(jogador1, jogador2)
     placar(jogador1, jogador2)
-    tabuleiro = cria_tabuleiro()
-    mostrar_tabuleiro(tabuleiro)
+    tabuleiros = cria_tabuleiro(jogador1), cria_tabuleiro(jogador2)
+    mostrar_tabuleiro(tabuleiros)
 
 rodar_programa()
