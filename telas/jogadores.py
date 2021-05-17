@@ -1,5 +1,5 @@
 
-def pedir_nome(id):
+def pedir_nome():
     return input('Informe o seu nome: ')
 
 

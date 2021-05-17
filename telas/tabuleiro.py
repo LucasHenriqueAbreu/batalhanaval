@@ -13,7 +13,8 @@ def mostrar_tabuleiro(tabuleiros):
             mostrar_indice_linha(j)
             for posicao in linha:
                 cor = '31m' if id_jogador == 1 else '34m'
-                print(f'{adiciona_cor(cor, " * ")}', end=' ')
+                valor = posicao or ' * '
+                print(f'{adiciona_cor(cor, valor)}', end=' ')
             print()
             if j == len(area) - 1 and id_jogador == 2:
                 mostrar_indice_coluna(len(linha))
